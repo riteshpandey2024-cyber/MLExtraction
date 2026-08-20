@@ -1,0 +1,164 @@
+when get data  DO THE FOLLOWING THINGS ::
+
+
+check missing  values 
+check duplicate values 
+data look mathematically {describe fn } ::  helps to detect outliers , only works for numerical col 
+correlation b/w cols ::  helps to remove unrelated col
+
+
+FINAL TEXT :
+----------------------------------------------------------------------------------------
+r2 score not applied in classification tasks but used for regression tasks
+low bias +  high variance models 
+----------------------------------------------------------------------------------------
+
+
+General Understanding
+
+1) To reduce overfitting :
+- bagging - boosting - regularization 
+
+2)feature extraction :
+- PCA - LDA(Linear Discriminant Analysis) - T-sne
+
+
+
+
+Charts :  
+
+
+Univariate : 
+countplot 
+pieChart 
+histogram 
+distplot 
+boxplot 
+bubble charts
+
+
+Bivariate : 
+
+scatterplot 
+BarPlot 
+Line plot 
+pair plot 
+HeatMap 
+Cluster Map
+JointPlot
+
+Multivariate:
+
+3d scatter plot 
+facetgrids 
+Pair plots 
+
+
+
+=> REGRESSION  : 
+Simple Lr :  DIRECT FORMULA / Grdaient descent 
+multiple LR 
+Polynomial 
+
+
+
+=> UNSUPERVISED LEARNING   : 
+K means clustering 
+agglomerative clustering
+DBSCAN 
+
+                                        FEATURE_ENGINEERING
+    
+     FEATURE SCALING :
+
+          standardization : [ StandardScaler  ]
+          Normalization : [ MinMaxSCaler,Mean Normalization , MaxAbsScaling  , RobustScaler]  
+     Encoding data : 
+          Label Encoder 
+          Ordinal Encoder 
+          One hot encoding 
+          pandas dummies
+     workflow transformations  : 
+          ColumnTransformer 
+          Pipeline 
+
+     Hyperparamter tuning : 
+          Cross Val Score || K-fold
+          Grid Search CV 
+     Missing Values  :
+          drop them 
+          Simple Imputer 
+          KNN imputer 
+          Missing Indicator
+          Iterative Imputer 
+          Numerical COLS : [by mean, by median, random,end of distribution] 
+          Categorical COLS : [mode :most frequent , new category : missing]
+   
+     
+
+
+
+Gradient Descent -  batch , Stochastic , mini-batch GD 
+
+
+
+
+PCA 🟢
+LINEAR REGRESSION 🟢
+-REGULARIZARION:  🟢
+|| RIDGE 
+|| LASSO 
+|| ELASTIC NET 
+GRADIENT DESCENT: 🟢
+|| MINI BATCH 
+|| SGD
+|| BATCH 
+LOGISTIC  🟢
+DECISION TREES 🟢
+VOTING ENSEMBLE  🟢
+BAGGING  🟢
+RANDOM FOREST  🟢
+-BOOSTING:
+|| ADABOOST 🟢
+|| GRADIENT BOOSTING
+|| XGBOOST 
+STACKING  🟢
+KNEIGHBORS 🟢
+SVM 
+K-MEANS  🟢
+AGGLOMERATIVE 🟢
+DBSCAN 🟢
+NAIVE BAYES(+GNB) 🟢
+SMOTE 🟢
+OPTUNA 🟢
+ROC curve 🟢
+
+
+
+
+
+
+SVM :
+- constraint optimization {convex analysis and  optimization theory || lagranges's multipliers || quadratic programming}
+-  why ||w|| == ||w||^2/2=>  just to make it differentiable 
+-  1/||w||  comes from  
+
+stats , vo anova and chi square chod diya hain
+
+
+Ml : GRADIENT BOOSTING and XGBOOST {superb algo just baad me } {much to explore and experiement} {only campusx videos}{ref}
+: SVM {learn constraint optimization theory & lagranges multipliers } + {saved articles and videos}
+
+
+
+
+
+
+
+
+some other techniques : 
+
+=>  df.isnull().mean() * 100 => gives the percentage of missing data directly 
+=> df.dropna().sample() => gives a sample from dataset after dropping null values 
+=> np.mean(cross_val_score(mode,x,y,cv,scoring="accuracy"))  => gives the final acc by fitting to the model "cv" times
+=> data[col].skew() => if ~0  then data is normally dist else >0  right skewed <0 left skewed , right skewed => outliers on right side 
